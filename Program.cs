@@ -7,7 +7,7 @@ namespace Test_IntegrityBAISProgram
     {    //1. register project fir SQLSERVER
         static void Main(string[] args)
         {
-
+            Console.WriteLine($"Push Test");
             GetProgramExcuteReader();
 
         }
