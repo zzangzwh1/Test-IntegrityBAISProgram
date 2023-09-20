@@ -4,10 +4,12 @@ using Microsoft.Data.SqlClient;
 namespace Test_IntegrityBAISProgram
 {
     internal class Program
-    {
+    {    //1. register project fir SQLSERVER
         static void Main(string[] args)
         {
+
             GetProgramExcuteReader();
+
         }
         public static void GetProgramExcuteReader()
         {
