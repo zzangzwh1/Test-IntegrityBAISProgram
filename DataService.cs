@@ -56,6 +56,7 @@ namespace Test_IntegrityBAISProgram
             }
 
         }
+        #region Add Data into Program using two parameters
         public static void AddDataIntoProgram(string programCode, string description)
         {
             string connectionString = @"Persist Security Info=false; Integrated Security=True; Database=NaitTest; Server=(localdb)\Local; ";
@@ -83,6 +84,9 @@ namespace Test_IntegrityBAISProgram
                 }
             }
         }
+        #endregion
+
+        #region Get One Program form Program Table using pK program Code
         public static void GetOneProgram(string programCode)
         {
             string connectionString = @"Persist Security Info=false; Integrated Security=true; database=NaitTest; Server=(localdb)\Local; ";
@@ -119,5 +123,11 @@ namespace Test_IntegrityBAISProgram
                 }
             }
         }
+        #endregion
+
+       /* public static void ChangeDescriptionInProgram(string programCode, string description)
+        {
+
+        }*/
     }
 }

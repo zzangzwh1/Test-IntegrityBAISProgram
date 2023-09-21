@@ -11,7 +11,7 @@ namespace Test_IntegrityBAISProgram
         {
            DataService.GetProgramData();
             //  DataService.AddDataIntoProgram("Baist3", "This is Baist3 Test");
-            DataService.GetOneProgram("Baist3");
+          //  DataService.GetOneProgram("Baist3");
 
 
         }
