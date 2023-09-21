@@ -1,21 +1,25 @@
 ﻿using System.Data;
 using System.Data.SqlTypes;
 using Microsoft.Data.SqlClient;
+using static System.Net.Mime.MediaTypeNames;
+
 namespace Test_IntegrityBAISProgram
 {
     internal class Program
     {    //1. register project fir SQLSERVER
         static void Main(string[] args)
         {
-          
-            GetProgramExcuteReader();
+           DataService.GetProgramData();
+            //  DataService.AddDataIntoProgram("Baist3", "This is Baist3 Test");
+            DataService.GetOneProgram("Baist3");
+
 
         }
-        public static void GetProgramExcuteReader()
+      /*  public static void GetProgramExcuteReader()
         {
             Console.WriteLine("GetProgramExcuteReader");
             SqlConnection conn = new();
-            conn.ConnectionString = @"Persist Security Info=false; Integrated Security = True; Database=NaitTemp; Server=(localDB)\mssqlLocalDb;";
+            conn.ConnectionString = @"Persist Security Info=false; Integrated Security = True; Database=NaitTest; Server=(localDB)\mssqlLocalDb;";
             conn.Open();
 
             SqlCommand command = new()
@@ -51,10 +55,10 @@ namespace Test_IntegrityBAISProgram
         public static void AddProgramExcuteNoneQueryExample()
         {
 
-            /*   SqlConnection myDatasource; // declaration
+            *//*   SqlConnection myDatasource; // declaration
                myDatasource = new(); // instantiation
-               myDatasource.ConnectionString = "Persist Security Info=false; Integrated Security = True; Database=NaitTemp; Server=(localDB)\\mssqlLocalDb;";*/
-            string connectionString = @"Persist Security Info=false; Integrated Security = True; Database=NaitTemp; Server=(localDB)\mssqlLocalDb;";
+               myDatasource.ConnectionString = "Persist Security Info=false; Integrated Security = True; Database=NaitTemp; Server=(localDB)\\mssqlLocalDb;";*//*
+            string connectionString = @"Persist Security Info=false; Integrated Security = True; Database=NaitTemp; Server=(localdb)\Local;";
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
 
@@ -89,19 +93,8 @@ namespace Test_IntegrityBAISProgram
 
             conn.Close();
 
-        }
+        }*/
 
-        public static void AddExcuteNoneQueryEx()
-        {
-            string connectionString = @"Persist Security Info=false; Integrity Security= True; Database=NaitTemp; Server=(localDB)\mssqlLocalDb;";
-            string insertProcedure = @"Exec Addprogram @value1 @value2";
-            SqlConnection conn = new SqlConnection(connectionString);
-            conn.Open();
-            SqlCommand command = new SqlCommand(insertProcedure, conn);
-
-
-            conn.Close();
-
-        }
+  
     }
 }
